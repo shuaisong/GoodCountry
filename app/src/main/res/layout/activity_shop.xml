@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.ShopActivity">
+
+    <com.reeching.goodcountry.view.ClearEditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/arcbar"
+        android:drawableEnd="@mipmap/button_default_delete"
+        android:drawableStart="@mipmap/button_default_search"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:lines="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/first"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:background="@android:color/white"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingTop="@dimen/dp_10" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/second"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_10" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/timg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/head"
+            app:layout_constraintStart_toEndOf="@id/head"
+            app:layout_constraintTop_toTopOf="@id/head">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:text="用户昵称"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="未认证"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/right_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@mipmap/arrow_home_right"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/head"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/head" />
+
+        <TextView
+            android:id="@+id/my_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_toStartOf="@id/right_head"
+            android:gravity="center"
+            android:text="@string/my_card"
+            app:layout_constraintBottom_toBottomOf="@id/head"
+            app:layout_constraintEnd_toStartOf="@id/right_head"
+            app:layout_constraintTop_toTopOf="@id/head" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/head" />
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:padding="@dimen/dp_10"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@id/head">
+
+            <com.reeching.goodcountry.view.DrawableCenterTextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/button_home_comment"
+                android:text="(111)" />
+
+            <com.reeching.goodcountry.view.DrawableCenterTextView
+                android:id="@+id/fabulous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/button_home_fabulous"
+                android:text="(111)" />
+
+            <com.reeching.goodcountry.view.DrawableCenterTextView
+                android:id="@+id/collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/button_home_collection"
+                android:text="(111)" />
+
+            <com.reeching.goodcountry.view.DrawableCenterTextView
+                android:id="@+id/integral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/button_home_integral"
+                android:text="(111)" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line1" />
+
+        <LinearLayout
+            android:id="@+id/line_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/view1">
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_1"
+                android:text="@string/balance"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="13.45元"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="@dimen/sp_17" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@mipmap/img_my_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/line_balance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/line_balance" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/line_balance" />
+
+        <com.reeching.goodcountry.view.MineItem
+            android:id="@+id/case_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:description="6"
+            app:drawStart="@mipmap/img_my_medicalrecord"
+            app:img_padding_end="@dimen/dp_5"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            app:title="@string/case_manage" />
+
+        <com.reeching.goodcountry.view.MineItem
+            android:id="@+id/article_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:description="了解更多知识"
+            app:drawStart="@mipmap/img_my_article"
+            app:img_padding_end="@dimen/dp_5"
+            app:layout_constraintTop_toBottomOf="@id/case_manage"
+            app:title="@string/article_manage" />
+
+        <com.reeching.goodcountry.view.MineItem
+            android:id="@+id/order_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:description="9"
+            app:drawStart="@mipmap/img_my_medicalrecord"
+            app:img_padding_end="@dimen/dp_5"
+            app:layout_constraintTop_toBottomOf="@id/article_manage"
+            app:title="@string/my_order" />
+
+        <com.reeching.goodcountry.view.MineItem
+            android:id="@+id/coupon_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:description="领券更划算"
+            app:drawStart="@mipmap/img_my_coupon"
+            app:img_padding_end="@dimen/dp_5"
+            app:layout_constraintTop_toBottomOf="@id/order_manage"
+            app:title="@string/my_coupon" />
+
+        <com.reeching.goodcountry.view.MineItem
+            android:id="@+id/invication_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:description="赚更多币"
+            app:drawStart="@mipmap/img_my_medicalrecord"
+            app:img_padding_end="@dimen/dp_5"
+            app:layout_constraintTop_toBottomOf="@id/coupon_manage"
+            app:title="@string/invication" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_3"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RadioButton
+            android:id="@+id/home"
+            style="@style/navigation_radio_style"
+            android:checked="true"
+            android:drawableTop="@drawable/navigation_bg_img_home"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/community"
+            style="@style/navigation_radio_style"
+            android:drawableTop="@drawable/navigation_bg_img_community"
+            android:text="@string/community" />
+
+        <RadioButton
+            android:id="@+id/release"
+            style="@style/navigation_radio_style"
+            android:drawableTop="@drawable/navigation_bg_img_release"
+            android:text="@string/release" />
+        <!-- <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+             <ImageView
+                 android:id="@+id/release"
+                 android:layout_width="@dimen/dp_60"
+                 android:layout_height="@dimen/dp_60"
+                 android:layout_centerInParent="true"
+                 android:src="@mipmap/home_function_tjb" />
+         </RelativeLayout>-->
+
+        <RadioButton
+            android:id="@+id/shopping"
+            style="@style/navigation_radio_style"
+            android:drawableTop="@drawable/navigation_bg_img_shop"
+
+            android:text="@string/shopping" />
+
+        <RadioButton
+            android:id="@+id/mine"
+            style="@style/navigation_radio_style"
+            android:drawableTop="@drawable/navigation_bg_img_mine"
+
+            android:text="@string/mine" />
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>

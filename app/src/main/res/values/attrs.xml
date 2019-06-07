@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleHead">
+        <attr name="circleBorderHeadWidth" format="dimension" />
+        <attr name="ringHeadColor" format="color" />
+        <attr name="backgroundHeadColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MineItem">
+        <attr name="drawStart" format="reference|integer" />
+        <attr name="img_padding_end" format="dimension"/>
+        <attr name="title" format="string" />
+        <attr name="description" format="string" />
+    </declare-styleable>
+    <declare-styleable name="TextEditView">
+        <attr name="text_title" format="string" />
+        <attr name="edit_content" format="string" />
+        <attr name="edit_hint" format="string" />
+    </declare-styleable>
+    <declare-styleable name="TitleView">
+        <attr name="title_title" format="string" />
+    </declare-styleable>
+</resources>

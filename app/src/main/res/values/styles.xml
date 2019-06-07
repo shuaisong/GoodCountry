@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--Appbar背景色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>//状态栏颜色
+        <!--页面背景色-->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- 控制各个控件被选中时的颜色-->
+        <item name="colorAccent">@color/blue</item>
+    </style>
+
+    <style name="navigation_radio_style">
+        <item name="android:textColor">@drawable/navigation_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_in</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/popuwindow_ani_out</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="mypopwindow_anim_style1">
+        <item name="android:windowEnterAnimation">@anim/popuwindow_ani_out</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/popupwindow_in</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.ReleaseFragment">
+
+    <com.reeching.goodcountry.view.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_title="@string/release" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray" />
+
+    <com.reeching.goodcountry.view.MineItem
+        android:id="@+id/release_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/release_article" />
+
+    <com.reeching.goodcountry.view.MineItem
+        android:id="@+id/release_issue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/release_issue" />
+
+    <com.reeching.goodcountry.view.MineItem
+        android:id="@+id/share_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/share_article" />
+</LinearLayout>

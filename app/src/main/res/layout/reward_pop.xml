@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/reward_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="@string/reward" />
+
+    <ImageView
+        android:id="@+id/reward_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:src="@drawable/close"
+        app:layout_constraintBottom_toBottomOf="@id/reward_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/reward_tv" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@drawable/divider_bg"
+        app:layout_constraintTop_toBottomOf="@id/reward_tv" />
+
+    <TextView
+        android:id="@+id/reward_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:padding="@dimen/dp_10"
+        android:text="@string/reward"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <com.xw.repo.BubbleSeekBar
+        android:id="@+id/reward_seek"
+        app:bsb_always_show_bubble="false"
+        app:bsb_hide_bubble="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_40"
+        app:layout_constraintTop_toBottomOf="@id/reward_value" />
+
+    <TextView
+        android:id="@+id/value_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/reward_seek"
+        app:layout_constraintTop_toBottomOf="@id/reward_seek" />
+
+    <TextView
+        android:id="@+id/value_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/__100"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@id/reward_seek"
+        app:layout_constraintTop_toBottomOf="@id/reward_seek" />
+
+    <Button
+        android:id="@+id/reward_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_button"
+        android:text="@string/sure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/value_start" />
+</android.support.constraint.ConstraintLayout>

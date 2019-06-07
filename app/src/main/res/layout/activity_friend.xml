@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FriendActivity">
+
+    <com.reeching.goodcountry.view.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_title="我的好友" />
+
+    <TextView
+        android:id="@+id/level1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:text="@string/level1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_36"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/level1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:textColor="@android:color/holo_blue_light"
+
+        app:layout_constraintBottom_toBottomOf="@+id/level1_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/level1_tv" />
+
+    <TextView
+        android:id="@+id/level2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="@string/level2"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+
+        app:layout_constraintStart_toStartOf="@+id/level1_tv"
+        app:layout_constraintTop_toBottomOf="@+id/level1_tv" />
+
+    <TextView
+        android:id="@+id/level2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toBottomOf="@+id/level2_tv"
+        app:layout_constraintEnd_toEndOf="@+id/level1"
+        app:layout_constraintTop_toTopOf="@+id/level2_tv" />
+
+    <TextView
+        android:id="@+id/level3_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="@string/level3"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintStart_toStartOf="@+id/level1_tv"
+        app:layout_constraintTop_toBottomOf="@+id/level2_tv" />
+
+    <TextView
+        android:id="@+id/level3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toBottomOf="@+id/level3_tv"
+        app:layout_constraintEnd_toEndOf="@+id/level1"
+        app:layout_constraintTop_toTopOf="@+id/level3_tv" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level3_tv" />
+</android.support.constraint.ConstraintLayout>

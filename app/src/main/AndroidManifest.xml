@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reeching.goodcountry">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+    Allows Glide to monitor connectivity status and restart failed requests if users go from a
+    a disconnected to a connected network state.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 获取粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden|keyboard"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.AuthenticationPatientActivity" />
+        <activity android:name=".activity.AuthenticationDoctorActivity" />
+        <activity android:name=".activity.AuthenticationSuccessActivity" />
+        <activity android:name=".activity.AuthenticationTypeActivity" />
+        <activity android:name=".activity.CaseManageActivity" />
+        <activity android:name=".activity.CaseInfoActivity" />
+        <activity android:name=".activity.AddCaseActivity" />
+        <activity android:name=".activity.ArticleManageActivity" />
+        <activity android:name=".activity.OrderActivity" />
+        <activity android:name=".activity.CouponManageActivity" />
+        <activity android:name=".activity.CardActivity" />
+        <activity android:name=".activity.WalletActivity" />
+        <activity android:name=".activity.ArticleDetailActivity" />
+        <activity android:name=".activity.ReplyCommentActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.reeching.goodcountry.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.ShopActivity" />
+        <activity android:name=".activity.HotelDetailActivity" />
+        <activity android:name=".activity.ShopCarActivity" />
+        <activity android:name=".activity.SureOrderActivity" />
+        <activity android:name=".activity.PayActivity" />
+        <activity android:name=".activity.LocationActivity" />
+        <activity android:name=".activity.ReleaseArticleActivity" />
+        <activity android:name=".activity.ArticleActivity" />
+        <activity android:name=".activity.FriendActivity" />
+        <activity android:name=".activity.ProxyDetailActivity" />
+
+    </application>
+
+</manifest>

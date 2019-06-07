@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ReleaseArticleActivity">
+
+    <com.reeching.goodcountry.view.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_title="@string/release_article" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_10">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/title"
+                android:textSize="@dimen/sp_18" />
+
+            <EditText
+                android:id="@+id/title_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:hint="@string/input_title"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/content"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintTop_toBottomOf="@id/title_et" />
+
+            <EditText
+                android:id="@+id/content_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/bg_community"
+                android:gravity="top|start"
+                android:hint="@string/input_content"
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@id/content_tv" />
+
+            <RadioGroup
+                android:id="@+id/release_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintTop_toBottomOf="@id/content_et">
+
+                <RadioButton
+                    android:id="@+id/knowledge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Disease_knowledge" />
+
+                <RadioButton
+                    android:id="@+id/experience"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/experience" />
+
+                <RadioButton
+                    android:id="@+id/opinion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/opinion" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/release_radio" />
+
+            <com.reeching.goodcountry.view.MineItem
+                android:id="@+id/select_case"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/view1"
+                app:title="@string/select_case" />
+
+            <TextView
+                android:id="@+id/add_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/add_img"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintTop_toBottomOf="@id/select_case" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/img_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:overScrollMode="never"
+                app:layout_constraintStart_toStartOf="@id/add_img"
+                app:layout_constraintTop_toBottomOf="@id/add_img" />
+
+            <TextView
+                android:id="@+id/issue_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/issue_coin"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintTop_toBottomOf="@id/img_recycler" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/issue_seek"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                app:bsb_always_show_bubble="false"
+                app:bsb_hide_bubble="true"
+                app:bsb_max="200"
+                app:bsb_second_track_color="@color/green"
+                app:bsb_track_color="@color/gray"
+                app:layout_constraintBottom_toTopOf="@id/other"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/issue_tv" />
+
+            <TextView
+                android:id="@+id/zero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3"
+                android:text="@string/_0"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="@id/issue_seek"
+                app:layout_constraintTop_toBottomOf="@id/issue_seek" />
+
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintEnd_toEndOf="@id/issue_seek"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/issue_seek" />
+
+            <TextView
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintEnd_toEndOf="@id/issue_seek"
+                app:layout_constraintTop_toBottomOf="@id/issue_seek" />
+
+            <EditText
+                android:id="@+id/coin_cus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_community"
+                android:hint="@string/input_issue_coin"
+                android:inputType="number"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/other" />
+
+            <Button
+                android:id="@+id/release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/bg_button"
+                android:text="@string/release"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/coin_cus" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
